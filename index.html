@@ -14,27 +14,11 @@
 
       var nomes = ['nome1', 'nome2', 'nome3'];
 
-      function minhaFuncao(a,b, calbackSuccess, calbackError){
-        if (false){
-
-          calbackSuccess()
-
-        }else{
-          calbackError()
-        }
+      function aula(){
+        alert("Disparou.");
       }
-
-      function calbackSuccess(){
-        console.log('SUCESSO');
-      }
-
-      function calbackError(){
-        console.log('ERROR');
-      }
-
-
-      minhaFuncao(10, 20, calbackSuccess,calbackError)
      
+
     </script>
 
   </head>
@@ -75,10 +59,13 @@
         </div>
       </nav>
 
-    <div style="margin-top:10px;" class="container"> 
+    <div onclick="aula()" style="background-color: red; width: 80px; height: 80px; margin-top:10px; cursor: pointer;"" class="container"> 
        
     </div>
 
+    <div onmouseout="aula()" style="background-color: green; width: 80px; height: 80px; margin-top:10px; cursor: pointer;"" class="container"> 
+       
+    </div>
    
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
