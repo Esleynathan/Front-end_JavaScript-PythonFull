@@ -12,13 +12,29 @@
     <script>
       var nome ="Ésley";
 
-      var nomes3 = ['nome3.1', 'nome3.2', 'nome3.3']
-      nomes3.pop()      
-      nomes3.push ('nomepush')
-      console.log (nomes3.indexOf('nome3.2'))
-      
-      console.log (nomes3.sort())
-    
+      var nomes = ['nome1', 'nome2', 'nome3'];
+
+      function minhaFuncao(a,b, calbackSuccess, calbackError){
+        if (false){
+
+          calbackSuccess()
+
+        }else{
+          calbackError()
+        }
+      }
+
+      function calbackSuccess(){
+        console.log('SUCESSO');
+      }
+
+      function calbackError(){
+        console.log('ERROR');
+      }
+
+
+      minhaFuncao(10, 20, calbackSuccess,calbackError)
+     
     </script>
 
   </head>
