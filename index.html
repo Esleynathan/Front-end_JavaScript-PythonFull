@@ -10,17 +10,22 @@
     <title>Hello, world!</title>
 
     <script>
-      var nome ="Ésley";
+      function soma (){
+      var n1 = document.getElementById('n1').value;
+      var n2 = document.getElementById('n2').value;
+      var soma = parseFloat(n1) + parseFloat(n2);
 
-      var nomes = ['nome1', 'nome2', 'nome3'];
+      var resultadoMostrar = document.getElementById('resultado');
+      if (soma >= 10){
+        resultadoMostrar.style.color = "green";
+      }else{
+        resultadoMostrar.style.color = "red";
+      }
+      resultadoMostrar.innerHTML = "A soma entre " + n1 + " e " + n2 + " é: " + soma;
+      console.log(soma);
+    }
+      
 
-      function aula(){
-        console.log('teste')
-      }
-     
-      function aula2(){
-        console.log('teste2')
-      }
 
     </script>
 
@@ -61,9 +66,24 @@
           </form>
         </div>
       </nav>
+      
+      <div style="text-align: center;" class="container">
+        <br>
+        <label>Numero 1</label>
+        <br>
+        <input type="number" id="n1">
+          <br>
+          <br>
+        <label>Numero 2</label>
+        <br>
+        <input type="number" id="n2">
+        <br><br>
+        <p id="resultado"></p>
+        <br>
+        <button onclick="soma()" class="btn btn-success">Enviar</button>
+        <br>
+        <br>
 
-      <div>
-        <input onblur="aula()" onfocus="aula2()" type="text">
       </div>
 
    
