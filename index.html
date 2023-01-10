@@ -10,29 +10,21 @@
     <title>Hello, world!</title>
 
     <script>
-      function soma (){
-      var n1 = document.getElementById('n1').value;
-      var n2 = document.getElementById('n2').value;
-      var soma = parseFloat(n1) + parseFloat(n2);
+      function tela(){
+        if (window.innerWidth < 500) {
+          document.getElementById('cont').style.display= "none";
+        }else{
+          document.getElementById('cont').style.display= "block";
 
-      var resultadoMostrar = document.getElementById('resultado');
-      if (soma >= 10){
-        resultadoMostrar.style.color = "green";
-      }else{
-        resultadoMostrar.style.color = "red";
+        }
       }
-      resultadoMostrar.innerHTML = "A soma entre " + n1 + " e " + n2 + " é: " + soma;
-      console.log(soma);
-    }
-      
-
 
     </script>
 
   </head>
 
 
-  <body>
+  <body onresize="tela()">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Pythonando</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,7 +59,7 @@
         </div>
       </nav>
       
-      <div style="text-align: center;" class="container">
+      <div style="text-align: center;" class="container" id="cont">
         <br>
         <label>Numero 1</label>
         <br>
